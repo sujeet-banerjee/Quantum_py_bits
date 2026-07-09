@@ -1,0 +1,32 @@
+# This is a sample YAML configuration file
+# YAML supports comments starting with the '#' character
+#sdsssd
+app_info:
+  name: "DataPipeline"
+  version: 1.2.5
+  environment: "production"
+
+# List of database connections
+databases:
+  - name: "primary_db"
+    host: "10.0.0.1"
+    port: 5432
+    enabled: true
+  - name: "secondary_db"
+    host: "10.0.0.2"
+    port: 5432
+    enabled: false
+
+# User settings with nested key-value pairs
+user_settings:
+  theme: "dark"
+  notifications:
+    email: true
+    sms: false
+  max_retries: 3
+
+# Feature flags using a list
+features:
+  - "beta_analytics"
+  - "new_dashboard"
+  - "experimental_api"
